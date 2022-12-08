@@ -11,10 +11,6 @@ const items = [
         position: 2,
         el: document.getElementById('carousel-item-3')
     },
-    {
-        position: 3,
-        el: document.getElementById('carousel-item-4')
-    },
 ];
 
 const options = {
@@ -46,7 +42,7 @@ function addStar() {
 }
 setInterval(addStar, 200)
 
-window.addEventListener('scroll', function() {
+const fadeUpScroll = function() {
 	var elements = Array.prototype.slice.call(document.getElementsByClassName('fade'));
 	console.log(elements)
 
@@ -57,9 +53,11 @@ window.addEventListener('scroll', function() {
             element.classList.add('fade-up')
         }
     });
-});
+}
 
+window.onload = fadeUpScroll;
 
+window.addEventListener('scroll',fadeUpScroll);
 
 //   window.onscroll = ()=>{
 //     //console.log(window.scrollY)

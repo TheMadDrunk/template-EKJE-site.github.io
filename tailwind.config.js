@@ -10,8 +10,10 @@ module.exports = {
       fontFamily: {
         ssans: [
           "'Quicksand', sans-serif",
-        ],
-      }
+        ]
+      },
+      
+      
     },
   },
   plugins: [],
